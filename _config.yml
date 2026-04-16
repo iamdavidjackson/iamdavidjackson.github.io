@@ -1,13 +1,15 @@
 title:            I am David Jackson
-description:      "Hello"
+description:      "Personal site and writing by David Jackson."
 logo:             logo.png
+locale:           en_CA
+baseurl:          ""
 disqus_shortname: davidjackson123
 share:            true
-dropcap:			true
+dropcap:          true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	  http://iamdavidjackson.com
+url:              https://iamdavidjackson.com
 
 # Owner/author information
 owner:
@@ -21,8 +23,6 @@ owner:
   facebook:       dave.jackson.5030
   github:         iamdavidjackson      
   instagram:      davidjackson123
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/u/0/102602916593522619858
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-52961108-1
@@ -46,11 +46,13 @@ links:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Toronto
-future:      true
-highlighter: pygments
+future:      false
+highlighter: rouge
 markdown:    kramdown
 paginate:    5
 paginate_path: "page:num"
+plugins:
+  - jekyll-paginate
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
@@ -71,7 +73,7 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://iamdavidjackson.com'
+  siteurl: 'https://iamdavidjackson.com'
   relativeLinks: 'iamdavidjackson.com/links.jsonp'
   media: 'images'
   metadata:
