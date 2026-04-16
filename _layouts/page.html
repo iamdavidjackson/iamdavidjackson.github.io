@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: site.locale | default: 'en' }}">
 <!--
 ====================================================
     __  ____  ______________  _______ ___    __ 
@@ -18,7 +18,7 @@ Description: Awesome dude, awesome life
 <head>
 {% include head.html %}
 </head>
-<body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
+<body class="post-template page" itemscope itemtype="https://schema.org/WebPage">
 
 <main id="notepad-page-container" class="notepad-page-container" role="main">
     
@@ -26,8 +26,8 @@ Description: Awesome dude, awesome life
         <header class="notepad-page-header">
             <div class="notepad-page-menu-header">
                 
-                    <a class="notepad-blog-logo" href="{{ site.url }}">
-                        <img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo">
+                    <a class="notepad-blog-logo" href="{{ '/' | relative_url }}">
+                        <img src="{{ '/images/' | append: site.logo | relative_url }}" alt="Blog Logo">
                     </a>
                 
                 
@@ -44,10 +44,10 @@ Description: Awesome dude, awesome life
             <li>{% if link.external %}
                     <a href="{{ link.url }}">{{ link.title }}</a>
                 {% else %}
-                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                    <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
                 {% endif %} </li>
 {% endfor %}            
-           <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+           <li><a href="{{ '/feed.xml' | relative_url }}" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
     </ul>
 </div>
             </div>
